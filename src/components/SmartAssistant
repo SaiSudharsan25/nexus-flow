@@ -2,11 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-interface SmartAssistantProps {
-  tasks: any[];
-}
-
-export default function SmartAssistant({ tasks }: SmartAssistantProps) {
+export default function SmartAssistant({ tasks }: { tasks: any[] }) {
   const [suggestions, setSuggestions] = useState<string[]>([]);
 
   useEffect(() => {
